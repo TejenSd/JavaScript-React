@@ -203,3 +203,5 @@ summary;
 const pagesRange = bookPageNumber > 1000 ? "Over a thousand" : "Less than a 1000";
 pagesRange;
 console.log(`The book has ${pagesRange} pages`)
+
+//Ternaries end
