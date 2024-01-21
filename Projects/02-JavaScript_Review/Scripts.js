@@ -153,7 +153,7 @@ const book = getBook(1);
 // const author = book.author;
 // author;
 
-const { title, author, publicationDate, genres } = book;
+const { title, author, publicationDate, genres, pages } = book;
 console.log(title, author, publicationDate, genres)
 
 //Destructuring with array (manually assiging the data by index to const)
@@ -192,8 +192,14 @@ updatedBook;
 // Template Literals (JavaScript ES6 Features)
 // Literals =>  Allows us to create Javascript strings that contains any javascript Expression inside string  
 //Strings will start with '' or "" but template literals will start with backtick ``
-const bookPageNumber = 1212;
+
+const bookPageNumber = 1111;
 
 const summary = `${title}, a ${bookPageNumber}-page book, was written by ${author} and published in 
 ${publicationDate.split("-")[0]}`;
 summary;
+
+//Ternaries instead of if/else statement
+const pagesRange = bookPageNumber > 1000 ? "Over a thousand" : "Less than a 1000";
+pagesRange;
+console.log(`The book has ${pagesRange} pages`)
