@@ -190,4 +190,10 @@ const updatedBooks = {
 updatedBook;
 
 // Template Literals (JavaScript ES6 Features)
-//Literals =>  Allows us to create Javascript strings that contains any javascript Expression inside string  
+// Literals =>  Allows us to create Javascript strings that contains any javascript Expression inside string  
+//Strings will start with '' or "" but template literals will start with backtick ``
+const bookPageNumber = 1212;
+
+const summary = `${title}, a ${bookPageNumber}-page book, was written by ${author} and published in 
+${publicationDate.split("-")[0]}`;
+summary;
