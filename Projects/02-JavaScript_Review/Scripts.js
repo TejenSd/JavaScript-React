@@ -205,3 +205,25 @@ pagesRange;
 console.log(`The book has ${pagesRange} pages`)
 
 //Ternaries end
+
+//Arrow Function (Way of writing a function introduced in ES6. Arrow functions are quicka and short for writing one line function)
+
+//Normal Function
+function getYear(str) {
+    return str.split("-")[0]
+}
+publicationDate;
+console.log(getYear(publicationDate));
+
+//Arror Function
+// this is single line function without curly brackets
+const getYearfunc = (str) => str.split("-")[0];
+console.log(getYearfunc(publicationDate));
+
+// this function now can be multiline function
+const getYearfunction = (str) => {
+    return str.split("-")[0]
+};
+console.log(getYearfunction(publicationDate));
+
+//Arrow Function Ends
