@@ -145,7 +145,7 @@ function getBook(id) {
 
 //Destructuring ==> It is Used when we need to get the data out of Array or Object
 //1. Destructuring with object
-const book = getBook(1);
+const book = getBook(2);
 
 // const title = book.title;
 // title;
@@ -153,7 +153,7 @@ const book = getBook(1);
 // const author = book.author;
 // author;
 
-const { title, author, publicationDate, genres, pages } = book;
+const { title, author, publicationDate, genres, pages, hasMovieAdaptation } = book;
 console.log(title, author, publicationDate, genres)
 
 //Destructuring with array (manually assiging the data by index to const)
@@ -227,3 +227,44 @@ const getYearfunction = (str) => {
 console.log(getYearfunction(publicationDate));
 
 //Arrow Function Ends
+
+//Short Circutting and Logical Operator => (&&,||,??)
+
+//Short Circutting with And && Operator 
+//(it will return second value if first value will not be faulty value) 
+//And if it would be a faulty value then if woul return false
+console.log(true && "some string value");
+console.log(false && "some string value");
+
+console.log(hasMovieAdaptation && "this book has a movie")
+
+//Flasy value =>  0, '', null, undefined
+//here jonas is not a falsy value that why we get some string
+console.log('jonas' && "some string");
+
+//here 0 is falsy value thats why we got some string
+console.log(0 && "some string");
+
+//Short Circutting with Or Operator
+//It will return true if first value will not be a faulty value
+//it will return the second value if first value will be faulty value
+console.log(true || "some string");
+console.log(false || "some string");
+
+console.log(book.translations.spanish)
+
+const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
+spanishTranslation;
+
+//When || can got wrong
+//Here in output the countwronh should be 0 but in || operator it will give no data
+console.log(book.reviews.librarything.reviewsCount)
+const countWrong = book.reviews.librarything.reviewsCount || "no data"
+countWrong;
+
+// ?? will return the second value if first value woulf be null or undefined
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+count;
+
+
+//Short Circutting end
